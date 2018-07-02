@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>Allowing for Reflow with Long URLs</title>
+		<link rel="stylesheet" type="text/css" href="https://rawgit.com/w3c/wcag21/master/css/sources.css"/>
+	</head>
+	<body>
+		<h1>Allowing for Reflow with Long URLs</h1>
+		<section id="meta">
+			<h2>Metadata</h2>
+			<p id="id"></p>
+			<p id="technology">css</p>
+			<p id="type">sufficient</p>
+		</section>
+		<section id="applicability">
+			<h2>When to Use</h2>
+			<p class="instructions">This technique is applicable to Cascading Style Sheet / HTML technologies.</p>
+		</section>
+		<section id="description">
+			<h2>Description</h2>
+			<p class="instructions">Long URLs can break reflow when the page is zoomed. The objective of this technique is to present URLs without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels or a vertical scroll bar at a height equivalent to 256 CSS pixels. This is done by using CSS techniques that adapt to the available viewport space. </p>
+			<p>
+		</section>
+		<section id="examples">
+			<h2>Examples</h2>
+			<p class="instructions"></p>
+			<section class="example">
+				<h3>Example 1: Breaking long URLs</h3>
+				<p>Using the follwoing CSS will cause long URLs to break at appropriate places (hyphens, spaces, etc.) without causeing reflow. </p>
+				<p>List of CSS declaration used and why they are used:</p>
+				<ul><li><strong>overflow-wrap: break-word;</strong> and <strong>word-wrap: break-word;</stong>: Allows long URLs to be broken, wrapped, and not overflow the available space. They are synonamous, however due to variable browser implementation, use both.</li>
+					<li><strong>word-break: break-all</strong>: Allows words to be broken and wrapped between letters. </li>
+					<li><strong>hyphens: auto</strong>: Allows words to be hyphenated and wrapped</li>
+				<code>a {
+					overflow-wrap: break-word;
+					word-wrap: break-word;
+					word-break: break-all;
+					hyphens: auto;
+					}
+
+
+  /* May need to add browser specific rule for hyphens to work. Not currently supported in Blink 
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;*/
+</code>
+				<p>Working example: link</p>
+			</section>
+		</section>
+		<section id="tests">
+			<h2>Tests</h2>
+			<section class="test-procedure">
+				<h3>Procedure</h3>
+				<ol>
+					<li>Step 1</li>
+				</ol>
+			</section>
+			<section class="test-results">
+				<h3>Expected Results</h3>
+				<ul>
+					<li>Result</li>
+				</ul>
+			</section>
+		</section>
+		<section id="related">
+			<h2>Related Techniques</h2>
+			<ul>
+				<li>ID</li>
+			</ul>
+		</section>
+	</body>
+</html>
