@@ -7,23 +7,17 @@
 /* specific for IE10 & 11, they do not support these declarations with "a" selector */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
  * { 
-overflow-wrap: break-word;
-word-break: break-word;
 word-wrap: break-word;
 	}
 }
 /* for all Edge, does not support these declarations with "a" selector */
 @supports (-ms-ime-align:auto) {
  * { 
-overflow-wrap: break-word;
-word-break: break-word;
 word-wrap: break-word;
 	}
 }
 
 	.wrapped { 
-overflow-wrap: break-word;
-word-break: break-word;
 word-wrap: break-word;
 	}
 	</style>
@@ -52,14 +46,13 @@ word-wrap: break-word;
   <p class="instructions"></p>
   <section class="example">
     <h3>Example 1: Breaking long URLs</h3>
-    <p>Using the following CSS will cause long URLs to break at appropriate places (hyphens, spaces, etc.) without causeing reflow. </p>
+    <p>Using the following CSS will cause long URLs to break at appropriate places (hyphens, spaces, etc.) and within words without causing reflow. </p>
     <p>List of CSS declarations used and why they are used:</p>
     <ul>
-      <li><strong>overflow-wrap: break-word;</strong> and <strong>word-wrap: break-word;</strong>: Allows long URLs to be broken, wrapped, and not overflow the available space. They are synonymous, however due to variable browser implementation, use both.</li>
-      <li><strong>word-break: break-word</strong>: Allows words to be broken and wrapped between letters. </li>
+     <li><strong>word-break: break-word</strong>: Allows words to be broken and wrapped between letters. </li>
     </ul>
-    <pre>	.wrapped { <br>	overflow-wrap: break-word;<br>	word-break: break-word;<br>	word-wrap: break-word;<br>	}</pre>
-    <p>Note:  IE and Edge  only support these declarations when used with the &quot;*&quot; selector.</p>
+    <pre>	.wrapped { <br>	word-wrap: break-word;<br>	}</pre>
+    <p>Note:  IE and Edge  only support this declaration when used with the &quot;*&quot; selector.</p>
     <p>Working examples no styles applied:</p>
     <ul>
       <li><a href="#">http://Iterative.approaches-to-corporate_strategy.net/foster collaborative thinking.to.further/the_overall-value proposition.htm</a></li>
