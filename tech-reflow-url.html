@@ -7,18 +7,18 @@
 /* specific for IE10 & 11, they do not support these declarations with "a" selector */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
  * { 
-word-wrap: break-word;
+overflow-wrap: break-word;
 	}
 }
 /* for all Edge, does not support these declarations with "a" selector */
 @supports (-ms-ime-align:auto) {
  * { 
-word-wrap: break-word;
+overflow-wrap: break-word;
 	}
 }
 
 	.wrapped { 
-word-wrap: break-word;
+overflow-wrap: break-word;
 	}
 	</style>
 </head>
@@ -51,7 +51,7 @@ word-wrap: break-word;
     <ul>
      <li><strong>word-break: break-word</strong>: Allows words to be broken and wrapped between letters. </li>
     </ul>
-    <pre>	.wrapped { <br>	word-wrap: break-word;<br>	}</pre>
+    <pre>	.wrapped { <br>	overflow-wrap: break-word;<br>	}</pre>
     <p>Note:  IE and Edge  only support this declaration when used with the &quot;*&quot; selector.</p>
     <p>Working examples no styles applied:</p>
     <ul>
