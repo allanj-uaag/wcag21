@@ -54,14 +54,14 @@ overflow-wrap: break-word;
     </ul>
     <pre>    .wrapped {overflow-wrap: break-word;}</pre>
     <p>Note:  IE and Edge  only support this declaration when used with the following declaration.</p>
-    <pre>	/* specific for IE10 & 11, they do not support these declarations with "a" selector */<br>
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {<br>
- 		* { word-wrap: break-word;}<br>
-	}<br><br>
-	/* for all Edge, does not support these declarations with "a" selector */<br>
-	@supports (-ms-ime-align:auto) {<br>
-		* { word-wrap: break-word;}<br>
-	}</pre>
+    <pre>    /* specific for IE10 & 11, they do not support these declarations with "a" selector */<br>
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {<br>
+         * { word-wrap: break-word;}<br>
+    }<br><br>
+    /* for all Edge, does not support these declarations with "a" selector */<br>
+    @supports (-ms-ime-align:auto) {<br>
+        * { word-wrap: break-word;}<br>
+    }</pre>
   <p><a href="https://rawgit.com/allanj-uaag/wcag21/example-reflow-url/example-reflow-url.html">Working Example</a></p>
   </section>
 </section>
