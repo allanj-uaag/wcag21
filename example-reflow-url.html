@@ -198,7 +198,7 @@ overflow-wrap: break-word;
 
     <main role="main" class="grid-item">        
       <h1>Allowing for Reflow with Long URLs</h1>
-      <p>Long URLs can break reflow when the page is zoomed. The objective of this technique is to present URLs without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels or a vertical scroll bar at a height equivalent to 256 CSS pixels. This is done by using CSS techniques that adapt to the available viewport space. </p>
+      <p>Long URLs can break reflow when the page is zoomed. The objective of this technique is to present URLs without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels or a vertical scroll bar at a height equivalent to 256 CSS pixels. This is done by using CSS techniques that adapt to the available viewport space. Note: Using human readable text links, rather than long URLS, is better for usability and accessibility. </p>
       <p>By default most browsers will wrap long URLs at the following characters: </p>  
   <ul>
     <li>&quot;-&quot; Hyphen  </li>
@@ -214,7 +214,8 @@ overflow-wrap: break-word;
       <li>Style applied: <a class="wrapped" href="#">http://Iterative.approaches-to-corporate_strategy.net/foster collaborative thinking.to.further/the_overall-value proposition.htm</a></li>
      
     </ul>
-    <p>Example 2 - URL with equal signs, underscores, ampersands, and dashes</p> <ul>
+    <p>Example 2 - URL with equal signs, underscores, ampersands, and dashes.
+ Note: due to the * selector all examples work in IE/Edge styled or not.</p> <ul>
       <li>No style applied: <a href="https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop">https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop</a></li> 
       <li>Style applied: <a class="wrapped" href="https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop">https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop</a></li>
     </ul>
@@ -223,13 +224,25 @@ overflow-wrap: break-word;
         <div class="subgrid-item">
           <div class="panel">
             <h3>Panel 1</h3>
-            <p>Nam venenatis turpis in erat tincidunt, non laoreet sem egestas. Etiam feugiat vehicula risus, non lobortis turpis aliquam nec. Nunc nec cursus arcu. In felis sapien, dictum a metus in, vehicula fermentum sem. Morbi in aliquam lorem. Suspendisse in interdum nunc.</p>
+            <p>Nam venenatis turpis in erat tincidunt, non laoreet sem egestas. Etiam feugiat vehicula risus, non lobortis turpis aliquam nec. Nunc nec cursus arcu. In felis sapien, dictum a metus in, vehicula fermentum sem. Morbi in aliquam lorem. Suspendisse in interdum nunc.</p>  <p>Example 1 - URL with words, spaces, dashes, and underscores<br>
+	  Note: due to the * selector all examples work in IE/Edge styled or not.</p>
+    <ul>
+      <li>No style applied: <a href="#">http://Iterative.approaches-to-corporate_strategy.net/foster collaborative thinking.to.further/the_overall-value proposition.htm</a></li>
+      <li>Style applied: <a class="wrapped" href="#">http://Iterative.approaches-to-corporate_strategy.net/foster collaborative thinking.to.further/the_overall-value proposition.htm</a></li>
+     
+    </ul>
+            
           </div>
         </div>
         <div class="subgrid-item">
           <div class="panel">
             <h3>Panel 2</h3>
             <p>Curabitur semper dui dui, quis interdum felis ullamcorper ut. Sed mauris eros, ullamcorper eget dolor a, fringilla consequat mi. In tortor lorem, varius in accumsan et, volutpat eu dolor. Proin fermentum velit non nulla blandit pharetra.</p>
+             <p>Example 2 - URL with equal signs, underscores, ampersands, and dashes.
+ Note: due to the * selector all examples work in IE/Edge styled or not.</p> <ul>
+      <li>No style applied: <a href="https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop">https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop</a></li> 
+      <li>Style applied: <a class="wrapped" href="https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop">https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop</a></li>
+    </ul>
           </div>
         </div>
       </div>
@@ -238,6 +251,17 @@ overflow-wrap: break-word;
     <aside role="complementary" class="grid-item">
       <h2>Aside</h2>
       <p>Quisque ac ultricies massa. Ut eu aliquam sem. Aenean sit amet pharetra tellus, eu sollicitudin sem. Curabitur sit amet erat mi. Proin rutrum pretium nisl nec ornare. Curabitur ultricies eros justo, vel tempus augue consequat eget. Ut lacinia orci a eleifend facilisis.</p>
+       <p>Example 1 - URL with words, spaces, dashes, and underscores<br>
+	  Note: due to the * selector all examples work in IE/Edge styled or not.</p>
+    <ul>
+      <li>No style applied: <a href="#">http://Iterative.approaches-to-corporate_strategy.net/foster collaborative thinking.to.further/the_overall-value proposition.htm</a></li>
+      <li>Style applied: <a class="wrapped" href="#">http://Iterative.approaches-to-corporate_strategy.net/foster collaborative thinking.to.further/the_overall-value proposition.htm</a></li>
+     
+    </ul> <p>Example 2 - URL with equal signs, underscores, ampersands, and dashes.
+ Note: due to the * selector all examples work in IE/Edge styled or not.</p> <ul>
+      <li>No style applied: <a href="https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop">https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop</a></li> 
+      <li>Style applied: <a class="wrapped" href="https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop">https://www.somecompany.com/gp/product/0060899220/ref=s9u_ri_gw_i7/135-1685811-9188658?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=0060899220&amp;pd_rd_r=83748ec1-7f08-11e8-98f0-e51cfb7ffc73&amp;pd_rd_w=KYrDt&amp;pd_rd_wg=lx9SR&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=3868N2MAQAMF45G1WDFW&amp;pf_rd_t=36701&amp;pf_rd_p=5cd472c0-39fe-4ebd-be4b-f95163d1a3f5&amp;pf_rd_i=desktop</a></li>
+    </ul>
     </aside>
 
     <footer role="contentinfo" class="grid-item">
