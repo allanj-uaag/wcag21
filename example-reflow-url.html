@@ -189,11 +189,11 @@ word-wrap: break-word;
     <li>"?" Question (IE, Chrome, Safari) </li>
     <li>&quot;&amp;&quot; Ampersand (Firefox only)</li>
   </ul>
-      <p>Sometimes these are not enough to ensure that long URLs will not overflow the viewport. </p>
-      <p>Example 1 - URL with words, spaces, dashes, and underscores<br>
-    Note: Due to specific browser CSS, all examples work in IE/Edge. The button has no effect.</p>
-      <button>Toggle CSS for long URLs</button>
-      <ul>
+      <p>Sometimes these are not enough to ensure that long URLs will not overflow the viewport. Because of browser link wrapping rules (see list above), links will wrap or not in different places.  Note: Due to browser specific CSS, all examples below wrap in IE/Edge. The button has no effect in IE/Edge.</p>
+  <p>The default state of this page is that no anchors are styled. You should see links breaking the boundaries of their containers. Some of which will cause horizontal scrolling. When the style 'a.wrapped {overflow-wrap: break-word;} is toggled with the button, the long URLs will wrap within their respective containers. </p>
+ <button>Toggle CSS for long URLs</button>  
+      <p>Example 1 - URL with words, spaces, dashes, and underscores</p>
+           <ul>
     <li>No style applied: <a href="#">http://Iterative.approaches-to-corporate_strategy.net/foster collaborative thinking.to.further/the_overall-value proposition.htm</a></li>
   </ul>
       <p>Example 2 - URL with equal signs, underscores, ampersands, and dashes.
