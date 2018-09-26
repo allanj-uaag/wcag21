@@ -35,7 +35,7 @@ overflow-wrap: break-word;
   <p>By default most browsers will wrap long URLs at the following characters:   
   <ul>
     <li>&quot;-&quot; Hyphen  </li>
-    <li>&quot; &quot; Space</li>
+    <li>&quot; &quot; Space (ASCII encoding %20)</li>
     <li>"?" Question (IE,  Chrome, Safari) </li>
     <li>&quot;&amp;&quot; Ampersand (Firefox only)</li>
   </ul> 
@@ -52,13 +52,13 @@ overflow-wrap: break-word;
      <li><strong>overflow-break: break-word</strong>: Allows words to be broken and wrapped between letters. </li>
 	    <li><strong>word-break: break-word</strong>: Allows words to be broken and wrapped between letters. (Microsoft only)</li>
     </ul>
-    <pre>    .wrapped {overflow-wrap: break-word;}</pre>
+    <pre>    a {overflow-wrap: break-word;}</pre>
     <p>Note:  IE and Edge  only support this declaration when used with the following declaration.</p>
-    <pre>    /* specific for IE10 & 11, they do not support these declarations with "a" selector */<br>
+    <pre>    /* specific for IE10 & 11, they do not support these declarations with "a" selector, must use the * (all elements) selector.*/<br>
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {<br>
          * { word-wrap: break-word;}<br>
     }<br><br>
-    /* for all Edge, does not support these declarations with "a" selector */<br>
+    /* for all Edge, does not support these declarations with "a" selector, must use the * (all elements) selector. */<br>
     @supports (-ms-ime-align:auto) {<br>
         * { word-wrap: break-word;}<br>
     }</pre>
@@ -68,7 +68,7 @@ overflow-wrap: break-word;
 <section id="tests">
   <h2>Tests</h2>
   <section class="test-procedure">
-    <h3>Procedure</h3>
+    <h3>Procedure: Using Zoom</h3>
     <ol>
       <li>Display content in a user agent capable of 400% zoom with a viewport-width of 1280 CSS pixels.</li>
       <li>If the text is read horizontally: Zoom in by 400%.   
@@ -77,15 +77,10 @@ overflow-wrap: break-word;
       <li>Check whether URL content and functionality is available without vertical scrolling.</li>
     </ol>
     <p>Note: If the browser is not capable of zooming to 400%, you can reduce the width of the browser proportionally. For example, at 300% zoom the viewport should be sized to 960px wide.</p>
-    <ol>
-	    <li>Display content in a user agent with a Responsive Design Mode feature.</li>
-      <li>Turn on the Responsive Design Mode - set width to 320 pixels or select a device with width of 320 pixels.
-      <li>Check whether URL content and functionality is available without horizontal scrolling.</li>
-      <li>If the text is read vertically: Set the viewport height to 256 CSS pixels.</li>
-      <li>Check whether URL content and functionality is available without vertical scrolling.</li>
+	 
   </section>
   <section class="test-results">
-    <h3>Expected Results</h3>
+    <h3>Expected Results </h3>
     <ul>
       <li>Check #3 is true.</li>
       <li>Check #5 is true.</li>
